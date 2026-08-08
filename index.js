@@ -26,15 +26,12 @@ app.get("/api/about", (req, res) => {
     });
 });
 
-//
 app.get("/api/square/:number", (req, res) => {
     const number = parseInt(req.params.number);
     const square = number * number;
     res.json({ message: `Number: ${number}, Square: ${square}` });
 });
 
-// A tiny menu
-//Build three GET endpoints — /api/coffee, /api/tea, /api/water — each returning the drink name and a price in JSON. Test all three in the browser.
 app.get("/api/coffee", (req, res) => {
     res.json({ drink: "Coffee", price: 2.5 });
 });
